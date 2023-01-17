@@ -1,0 +1,156 @@
+body {
+	margin: 0;
+
+	font-family: 'Poppins', sans-serif;
+
+}
+
+body * {
+	box-sizing: border-box;
+
+}
+
+.main-login {
+	width: 100vw;
+	height: 100vh;
+	background: #20a4a3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.left-login {
+	width: 50vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.left-login>h1 {
+	font-size: 2.5vw;
+	color: #fff;
+	margin-bottom: 20px;
+	border-right: 2px solid #fff;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+.typing-animation {
+	animation: blinkcursor 500ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 18em;
+	}
+}
+
+@keyframes blinkcursor {
+	from {
+		border-right-color: rgba(255, 255, 255, 0.75)
+	}
+
+	to {
+		border-right-color: transparent;
+	}
+}
+
+.left-login-image {
+	width: 35vw;
+}
+
+.right-login {
+	width: 50vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-login {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login>img {
+	width: 80%;
+	padding: 20px;
+	margin-top: -50px;
+}
+
+.textfield {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin: 10px 0px;
+
+}
+
+.textfield>input {
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+	background: #e2e870a8;
+	color: #000;
+	font-size: 12pt;
+	outline: none;
+	box-sizing: border-box;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+	.card-login {
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	.main-login {
+		flex-direction: column;
+		width: 100%;
+
+	}
+
+	.left-login>h1 {
+		display: none;
+
+	}
+
+	.left-login {
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+		margin-top: 50px;
+	}
+
+	.right-login {
+		width: 100%;
+		height: auto;
+	}
+
+	.left-login {
+		width: 50vw;
+
+	}
+
+	.card-login {
+		width: 80%;
+		border-radius: 20px;
+	}
+}
