@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { Router } from "./server/router";
+import { Router } from "./routes/router";
 
 export const App = () => {
   return (
