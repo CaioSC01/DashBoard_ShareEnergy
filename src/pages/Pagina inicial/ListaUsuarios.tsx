@@ -31,8 +31,8 @@ export const ListaUsuarios = () => {
   return (
     <>
       <Theme>
-        <div className="flex items-center space-x-4 sm:px-20 ">
-          <h2 className="py-4 text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+        <div className="flex items-center space-x-4 sm:px-20  ">
+          <h2 className="py-4 text-2xl font-bold leading-7 text-gray-900 sm:text-3xl mb-5  sm:truncate">
             Lista de Usuarios
           </h2>
         </div>
