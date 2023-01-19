@@ -1,30 +1,32 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { Theme } from "../../components/Theme/Theme";
+import { CardUsuario } from "../../components/Cards/CardUsuario";
+
 
 export const ListaUsuarios = () => {
   const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`/campanha`)
-  //     .then((response) => {
-  //       setPosts(response.data);
-  //     })
-  //     .catch(() => {
-  //       console.log("Error ao efetuar req");
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(`https://randomuser.me/api/`)
+      .then((response) => {
+        setPosts(response.data);
+      })
+      .catch(() => {
+        console.log("Error ao efetuar req");
+      });
+  }, []);
 
-  // const columns = useMemo(
-  //   () => [
-  //     {
-  //       Header: "Nome",
-  //       accessor: "Nome",
-  //     },
-  //   ],
-  //   []
-  // );
+  const columns = useMemo(
+    () => [
+      {
+        Header: "Nome",
+        accessor: "Nome",
+      },
+    ],
+    []
+  );
 
   return (
     <>
@@ -35,7 +37,9 @@ export const ListaUsuarios = () => {
           </h2>
         </div>
         {/* TABELA/CONTEUDO/CARDS... */}
-        <div className="  sm:ml-10 ">sss</div>
+        <div className="  sm:ml-10 ">
+          <CardUsuario/>
+        </div>
       </Theme>
     </>
   );
