@@ -11,7 +11,7 @@ export function CardUsuario() {
 			.get(`https://randomuser.me/api/?results=50`)
 			.then((response) => {
 				setUsusario(response.data.results);
-				console.log(response.data.results)
+				
 			})
 			.catch(() => {
 				console.log("Error ao efetuar req");
@@ -33,9 +33,7 @@ export function CardUsuario() {
                 <h3 className="truncate text-sm font-medium text-gray-900">
                   {user.name.first} {user.name.last}, {user.registered.age}
                 </h3>
-                <span className="inline-block flex-shrink-0 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
-                  {user.role}
-                </span>
+
               </div>
               <p className="mt-1 truncate text-sm text-gray-500">
                 {user.email}
